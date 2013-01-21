@@ -28,6 +28,7 @@
 		BE6A149716ADB01C00CFFD1D /* CTCDSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6A149616ADB01C00CFFD1D /* CTCDSettingsViewController.m */; };
 		BE6A149A16ADB09400CFFD1D /* CTCDMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6A149916ADB09400CFFD1D /* CTCDMessageViewController.m */; };
 		BE6A14A016ADC20300CFFD1D /* CTCDSymbolCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6A149F16ADC20300CFFD1D /* CTCDSymbolCell.m */; };
+		BED5316C16ADF16000A3037D /* MapBox.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BED5316B16ADF16000A3037D /* MapBox.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		BE6A149916ADB09400CFFD1D /* CTCDMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTCDMessageViewController.m; sourceTree = "<group>"; };
 		BE6A149E16ADC20300CFFD1D /* CTCDSymbolCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTCDSymbolCell.h; sourceTree = "<group>"; };
 		BE6A149F16ADC20300CFFD1D /* CTCDSymbolCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTCDSymbolCell.m; sourceTree = "<group>"; };
+		BED5316B16ADF16000A3037D /* MapBox.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MapBox.bundle; path = frameworks/MapBox.framework/Versions/A/Resources/MapBox.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 		BE6A145916AD996D00CFFD1D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BED5316B16ADF16000A3037D /* MapBox.bundle */,
 				BE6A145A16AD996D00CFFD1D /* MapAlert-Info.plist */,
 				BE6A145B16AD996D00CFFD1D /* InfoPlist.strings */,
 				BE6A145E16AD996D00CFFD1D /* main.m */,
@@ -232,6 +235,7 @@
 				BE6A146716AD996D00CFFD1D /* Default@2x.png in Resources */,
 				BE6A146916AD996D00CFFD1D /* Default-568h@2x.png in Resources */,
 				BE6A148916ADA5D500CFFD1D /* MapAlert_iPhone.storyboard in Resources */,
+				BED5316C16ADF16000A3037D /* MapBox.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +330,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MapAlert/MapAlert-Prefix.pch";
 				INFOPLIST_FILE = "MapAlert/MapAlert-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/MapAlert/frameworks/MapBox.framework\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -341,6 +350,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MapAlert/MapAlert-Prefix.pch";
 				INFOPLIST_FILE = "MapAlert/MapAlert-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/MapAlert/frameworks/MapBox.framework\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

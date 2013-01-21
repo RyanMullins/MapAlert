@@ -11,7 +11,7 @@
 
 @interface CTCDAlertViewController : UIViewController <RMMapViewDelegate>
 
-@property (nonatomic, strong) IBOutlet UIView * mapView;
+@property (nonatomic, strong) IBOutlet RMMapView * mapView;
 @property (nonatomic, strong) IBOutlet UIButton * alertButton;
 @property (nonatomic, strong) IBOutlet UIButton * settingsButton;
 
