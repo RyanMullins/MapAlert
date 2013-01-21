@@ -19,17 +19,21 @@
 @end
 
 @implementation CTCDAlertViewController
+@synthesize mapView;
+@synthesize alertButton;
+@synthesize settingsButton;
 
 - (void) viewDidLoad {
     [super viewDidLoad];
-    
-    RMMapBoxSource * tileSource = [[RMMapBoxSource alloc] initWithMapID:(([[UIScreen mainScreen] scale] > 1.0) ? MAP_ID_RETINA : MAP_ID)];
-    [[self mapView] setTileSource:tileSource];
-//    [theMap setZoom:ZOOM_LEVEL_DEFAULT];
-//    [theMap setMaxZoom:ZOOM_LEVEL_MAX];
-//    [theMap setMinZoom:ZOOM_LEVEL_MIN];
-//    [theMap setShowsUserLocation:YES];
-//    [theMap setCenterCoordinate:CLLocationCoordinate2DMake(40.664167, -73.938611)];
+    [[self mapView] setUserTrackingMode:RMUserTrackingModeFollow animated:YES];
+}
+
+- (void) viewDidAppear:(BOOL)animated {
+    [[self mapView] setTileSource:[[RMMapBoxSource alloc] initWithMapID:(([[UIScreen mainScreen] scale] > 1.0) ? MAP_ID_RETINA : MAP_ID)]];
+    [[self mapView] setZoom:ZOOM_LEVEL_DEFAULT];
+    [[self mapView] setMaxZoom:ZOOM_LEVEL_MAX];
+    [[self mapView] setMinZoom:ZOOM_LEVEL_MIN];
+    [[self mapView] setShowsUserLocation:YES];
 }
 
 - (void)didReceiveMemoryWarning
