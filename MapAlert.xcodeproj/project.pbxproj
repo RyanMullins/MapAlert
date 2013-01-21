@@ -23,6 +23,11 @@
 		BE6A148516ADA5A800CFFD1D /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6A148416ADA5A800CFFD1D /* libsqlite3.dylib */; };
 		BE6A148716ADA5B400CFFD1D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6A148616ADA5B400CFFD1D /* libz.dylib */; };
 		BE6A148916ADA5D500CFFD1D /* MapAlert_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE6A148816ADA5D500CFFD1D /* MapAlert_iPhone.storyboard */; };
+		BE6A149016ADAFAD00CFFD1D /* CTCDAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6A148F16ADAFAD00CFFD1D /* CTCDAlertViewController.m */; };
+		BE6A149416ADAFC800CFFD1D /* CTCDSymbolSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6A149316ADAFC800CFFD1D /* CTCDSymbolSearchViewController.m */; };
+		BE6A149716ADB01C00CFFD1D /* CTCDSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6A149616ADB01C00CFFD1D /* CTCDSettingsViewController.m */; };
+		BE6A149A16ADB09400CFFD1D /* CTCDMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6A149916ADB09400CFFD1D /* CTCDMessageViewController.m */; };
+		BE6A14A016ADC20300CFFD1D /* CTCDSymbolCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6A149F16ADC20300CFFD1D /* CTCDSymbolCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +51,16 @@
 		BE6A148416ADA5A800CFFD1D /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		BE6A148616ADA5B400CFFD1D /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BE6A148816ADA5D500CFFD1D /* MapAlert_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MapAlert_iPhone.storyboard; sourceTree = "<group>"; };
+		BE6A148E16ADAFAD00CFFD1D /* CTCDAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTCDAlertViewController.h; sourceTree = "<group>"; };
+		BE6A148F16ADAFAD00CFFD1D /* CTCDAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTCDAlertViewController.m; sourceTree = "<group>"; };
+		BE6A149216ADAFC800CFFD1D /* CTCDSymbolSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTCDSymbolSearchViewController.h; sourceTree = "<group>"; };
+		BE6A149316ADAFC800CFFD1D /* CTCDSymbolSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTCDSymbolSearchViewController.m; sourceTree = "<group>"; };
+		BE6A149516ADB01C00CFFD1D /* CTCDSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTCDSettingsViewController.h; sourceTree = "<group>"; };
+		BE6A149616ADB01C00CFFD1D /* CTCDSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTCDSettingsViewController.m; sourceTree = "<group>"; };
+		BE6A149816ADB09400CFFD1D /* CTCDMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTCDMessageViewController.h; sourceTree = "<group>"; };
+		BE6A149916ADB09400CFFD1D /* CTCDMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTCDMessageViewController.m; sourceTree = "<group>"; };
+		BE6A149E16ADC20300CFFD1D /* CTCDSymbolCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTCDSymbolCell.h; sourceTree = "<group>"; };
+		BE6A149F16ADC20300CFFD1D /* CTCDSymbolCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTCDSymbolCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +154,8 @@
 			isa = PBXGroup;
 			children = (
 				BE6A148816ADA5D500CFFD1D /* MapAlert_iPhone.storyboard */,
+				BE6A149E16ADC20300CFFD1D /* CTCDSymbolCell.h */,
+				BE6A149F16ADC20300CFFD1D /* CTCDSymbolCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -146,6 +163,14 @@
 		BE6A147316ADA1AF00CFFD1D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BE6A148E16ADAFAD00CFFD1D /* CTCDAlertViewController.h */,
+				BE6A148F16ADAFAD00CFFD1D /* CTCDAlertViewController.m */,
+				BE6A149216ADAFC800CFFD1D /* CTCDSymbolSearchViewController.h */,
+				BE6A149316ADAFC800CFFD1D /* CTCDSymbolSearchViewController.m */,
+				BE6A149516ADB01C00CFFD1D /* CTCDSettingsViewController.h */,
+				BE6A149616ADB01C00CFFD1D /* CTCDSettingsViewController.m */,
+				BE6A149816ADB09400CFFD1D /* CTCDMessageViewController.h */,
+				BE6A149916ADB09400CFFD1D /* CTCDMessageViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -219,6 +244,11 @@
 			files = (
 				BE6A145F16AD996D00CFFD1D /* main.m in Sources */,
 				BE6A146316AD996D00CFFD1D /* CTCDAppDelegate.m in Sources */,
+				BE6A149016ADAFAD00CFFD1D /* CTCDAlertViewController.m in Sources */,
+				BE6A149416ADAFC800CFFD1D /* CTCDSymbolSearchViewController.m in Sources */,
+				BE6A149716ADB01C00CFFD1D /* CTCDSettingsViewController.m in Sources */,
+				BE6A149A16ADB09400CFFD1D /* CTCDMessageViewController.m in Sources */,
+				BE6A14A016ADC20300CFFD1D /* CTCDSymbolCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +365,7 @@
 				BE6A146E16AD996D00CFFD1D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

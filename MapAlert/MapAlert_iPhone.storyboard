@@ -4,24 +4,87 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Alert View Controller-->
         <scene sceneID="GRl-C6-UCI">
             <objects>
-                <viewController id="tD9-bO-5CX" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="bkL-bc-LIk">
+                <viewController id="tD9-bO-5CX" customClass="CTCDAlertViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="alertView" id="bkL-bc-LIk">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EDB-qo-o6k" userLabel="Map View" customClass="RMMapView">
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" restorationIdentifier="buttonBackground" translatesAutoresizingMaskIntoConstraints="NO" id="deb-Ia-orA" userLabel="Button Background">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="alertButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Y9-38-TUW" userLabel="Alert Button">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="73" id="QYi-Cr-wBf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Alert!">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="avL-Xa-Kr1" kind="push" id="hp3-0c-V0K"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y2h-ut-DI8" userLabel="Settings Button">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="73" id="8s2-8Z-ggx"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Settings">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="30r-R9-HUB" kind="modal" id="EEK-X5-53z"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="1Y9-38-TUW" firstAttribute="top" secondItem="deb-Ia-orA" secondAttribute="top" constant="12" id="2yc-n8-fnt"/>
+                                    <constraint firstItem="1Y9-38-TUW" firstAttribute="leading" secondItem="deb-Ia-orA" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="SJM-uW-tSu"/>
+                                    <constraint firstItem="Y2h-ut-DI8" firstAttribute="baseline" secondItem="1Y9-38-TUW" secondAttribute="baseline" type="default" id="ZEJ-eV-btg"/>
+                                    <constraint firstAttribute="trailing" secondItem="Y2h-ut-DI8" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="cZt-tg-xSz"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EDB-qo-o6k" firstAttribute="leading" secondItem="bkL-bc-LIk" secondAttribute="leading" type="default" id="IaQ-f3-3LK"/>
+                            <constraint firstItem="deb-Ia-orA" firstAttribute="bottom" secondItem="bkL-bc-LIk" secondAttribute="bottom" type="default" id="Igb-AW-2vv"/>
+                            <constraint firstAttribute="bottom" secondItem="EDB-qo-o6k" secondAttribute="bottom" type="user" id="LtO-kJ-REI"/>
+                            <constraint firstAttribute="trailing" secondItem="EDB-qo-o6k" secondAttribute="trailing" type="user" id="Nxn-iL-Kac"/>
+                            <constraint firstItem="deb-Ia-orA" firstAttribute="top" secondItem="bkL-bc-LIk" secondAttribute="top" constant="480" type="user" id="PxW-1j-KGr"/>
+                            <constraint firstItem="deb-Ia-orA" firstAttribute="leading" secondItem="bkL-bc-LIk" secondAttribute="leading" type="user" id="W4v-kx-SVR"/>
+                            <constraint firstItem="EDB-qo-o6k" firstAttribute="top" secondItem="bkL-bc-LIk" secondAttribute="top" type="default" id="YXh-KS-Nol"/>
+                            <constraint firstItem="deb-Ia-orA" firstAttribute="trailing" secondItem="bkL-bc-LIk" secondAttribute="trailing" type="default" id="bgm-rL-F61"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="alertButton" destination="1Y9-38-TUW" id="021-1U-diE"/>
+                        <outlet property="mapView" destination="EDB-qo-o6k" id="PrY-jp-KT3"/>
+                        <outlet property="settingsButton" destination="Y2h-ut-DI8" id="jGk-Sw-ShT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3vC-62-RHO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-816" y="-6"/>
+            <point key="canvasLocation" x="-656" y="-370"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="tbb-hq-lSO">
             <objects>
-                <viewController id="30r-R9-HUB" sceneMemberID="viewController">
+                <viewController id="30r-R9-HUB" customClass="CTCDSettingsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P8S-wr-dVI">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -32,35 +95,147 @@
             </objects>
             <point key="canvasLocation" x="152" y="-738"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="rkg-0c-id9">
+        <!--Symbol Search View Controller-->
+        <scene sceneID="1ON-XH-8Y5">
             <objects>
-                <viewController id="YcC-fS-KIa" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="DAG-3P-7Os">
+                <viewController id="avL-Xa-Kr1" customClass="CTCDSymbolSearchViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8xo-1D-ytH">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sxB-ze-0Q0">
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KhP-IU-RVw">
+                                    <size key="itemSize" width="100" height="120"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="symbolCell" id="ixN-kH-GpL" customClass="CTCDSymbolCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Ub-ZQ-RUv"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cul-UA-1LA">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="tcl-Mp-KQ3"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="9Ub-ZQ-RUv" firstAttribute="top" secondItem="ixN-kH-GpL" secondAttribute="top" type="default" id="3Yd-Xp-goM"/>
+                                            <constraint firstItem="9Ub-ZQ-RUv" firstAttribute="trailing" secondItem="ixN-kH-GpL" secondAttribute="trailing" type="default" id="9Di-sd-u6J"/>
+                                            <constraint firstItem="cul-UA-1LA" firstAttribute="bottom" secondItem="ixN-kH-GpL" secondAttribute="bottom" type="default" id="FM2-Me-FUx"/>
+                                            <constraint firstItem="cul-UA-1LA" firstAttribute="leading" secondItem="ixN-kH-GpL" secondAttribute="leading" type="default" id="OPi-KL-CMi"/>
+                                            <constraint firstAttribute="bottom" secondItem="9Ub-ZQ-RUv" secondAttribute="bottom" constant="20" type="default" id="Rdl-vv-dKM"/>
+                                            <constraint firstItem="9Ub-ZQ-RUv" firstAttribute="leading" secondItem="ixN-kH-GpL" secondAttribute="leading" type="default" id="V14-XX-U0W"/>
+                                            <constraint firstItem="cul-UA-1LA" firstAttribute="trailing" secondItem="ixN-kH-GpL" secondAttribute="trailing" type="default" id="bYB-5N-ASF"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="symbolImage" destination="9Ub-ZQ-RUv" id="s6g-7g-pWy"/>
+                                            <outlet property="symbolName" destination="cul-UA-1LA" id="eXD-ai-yNR"/>
+                                            <segue destination="g1E-Ac-BLc" kind="push" id="QQj-lU-mI1"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="6oF-hI-suv">
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sxB-ze-0Q0" firstAttribute="trailing" secondItem="8xo-1D-ytH" secondAttribute="trailing" type="default" id="1W2-je-cyG"/>
+                            <constraint firstItem="sxB-ze-0Q0" firstAttribute="leading" secondItem="8xo-1D-ytH" secondAttribute="leading" type="default" id="6Bd-Ee-D1S"/>
+                            <constraint firstItem="6oF-hI-suv" firstAttribute="top" secondItem="8xo-1D-ytH" secondAttribute="top" type="default" id="DEB-9i-gLn"/>
+                            <constraint firstItem="6oF-hI-suv" firstAttribute="trailing" secondItem="8xo-1D-ytH" secondAttribute="trailing" type="default" id="XNU-sy-Waa"/>
+                            <constraint firstItem="sxB-ze-0Q0" firstAttribute="top" secondItem="6oF-hI-suv" secondAttribute="bottom" type="default" id="YxA-XG-yQG"/>
+                            <constraint firstItem="sxB-ze-0Q0" firstAttribute="bottom" secondItem="8xo-1D-ytH" secondAttribute="bottom" type="default" id="bvd-q2-EgH"/>
+                            <constraint firstItem="6oF-hI-suv" firstAttribute="leading" secondItem="8xo-1D-ytH" secondAttribute="leading" type="default" id="jtB-jc-nQj"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Ixa-WE-qbg"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gTd-1D-OJA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RiS-H9-ZrQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="159" y="-6"/>
+            <point key="canvasLocation" x="147" y="-6"/>
         </scene>
-        <!--View Controller-->
+        <!--Message View Controller-->
         <scene sceneID="048-9B-w8X">
             <objects>
-                <viewController id="g1E-Ac-BLc" sceneMemberID="viewController">
+                <viewController id="g1E-Ac-BLc" customClass="CTCDMessageViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dPf-HG-jXi">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ltw-mL-e4t"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ibb-D4-Fjc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="152" y="800"/>
+            <point key="canvasLocation" x="796" y="-6"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="CTCDAlertViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CTCDAlertViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="alertButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="mapView" candidateClass="RMMapView"/>
+                <relationship kind="outlet" name="settingsButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="CTCDMessageViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CTCDMessageViewController.h"/>
+        </class>
+        <class className="CTCDSettingsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CTCDSettingsViewController.h"/>
+        </class>
+        <class className="CTCDSymbolCell" superclassName="UICollectionViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CTCDSymbolCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="symbolImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="symbolName" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="CTCDSymbolSearchViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CTCDSymbolSearchViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="searchBar" candidateClass="UISearchBar"/>
+                <relationship kind="outlet" name="symbolCollectionView" candidateClass="UICollectionView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="RMMapView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RMMapView.h"/>
+            <relationships>
+                <relationship kind="outlet" name="delegate"/>
+            </relationships>
+        </class>
+        <class className="UICollectionReusableView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
+        </class>
+        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
+        </class>
+        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
+        </class>
+        <class className="UICollectionViewLayout" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
