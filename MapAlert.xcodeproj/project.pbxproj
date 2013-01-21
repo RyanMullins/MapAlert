@@ -16,6 +16,11 @@
 		BE6A146516AD996D00CFFD1D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BE6A146416AD996D00CFFD1D /* Default.png */; };
 		BE6A146716AD996D00CFFD1D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE6A146616AD996D00CFFD1D /* Default@2x.png */; };
 		BE6A146916AD996D00CFFD1D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE6A146816AD996D00CFFD1D /* Default-568h@2x.png */; };
+		BE6A147016AD9F1B00CFFD1D /* MapBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6A146F16AD9F1B00CFFD1D /* MapBox.framework */; };
+		BE6A147516ADA1E000CFFD1D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6A147416ADA1E000CFFD1D /* CoreLocation.framework */; };
+		BE6A147716ADA1ED00CFFD1D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6A147616ADA1ED00CFFD1D /* QuartzCore.framework */; };
+		BE6A147916ADA20000CFFD1D /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6A147816ADA20000CFFD1D /* libsqlite3.dylib */; };
+		BE6A147B16ADA20900CFFD1D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6A147A16ADA20900CFFD1D /* libz.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +37,11 @@
 		BE6A146416AD996D00CFFD1D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		BE6A146616AD996D00CFFD1D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		BE6A146816AD996D00CFFD1D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		BE6A146F16AD9F1B00CFFD1D /* MapBox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapBox.framework; path = MapAlert/frameworks/MapBox.framework; sourceTree = "<group>"; };
+		BE6A147416ADA1E000CFFD1D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		BE6A147616ADA1ED00CFFD1D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		BE6A147816ADA20000CFFD1D /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		BE6A147A16ADA20900CFFD1D /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,9 +49,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE6A147B16ADA20900CFFD1D /* libz.dylib in Frameworks */,
+				BE6A147916ADA20000CFFD1D /* libsqlite3.dylib in Frameworks */,
+				BE6A147716ADA1ED00CFFD1D /* QuartzCore.framework in Frameworks */,
+				BE6A147516ADA1E000CFFD1D /* CoreLocation.framework in Frameworks */,
 				BE6A145316AD996D00CFFD1D /* UIKit.framework in Frameworks */,
 				BE6A145516AD996D00CFFD1D /* Foundation.framework in Frameworks */,
 				BE6A145716AD996D00CFFD1D /* CoreGraphics.framework in Frameworks */,
+				BE6A147016AD9F1B00CFFD1D /* MapBox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +66,10 @@
 		BE6A144316AD996D00CFFD1D = {
 			isa = PBXGroup;
 			children = (
+				BE6A147A16ADA20900CFFD1D /* libz.dylib */,
+				BE6A147816ADA20000CFFD1D /* libsqlite3.dylib */,
+				BE6A147616ADA1ED00CFFD1D /* QuartzCore.framework */,
+				BE6A147416ADA1E000CFFD1D /* CoreLocation.framework */,
 				BE6A145816AD996D00CFFD1D /* MapAlert */,
 				BE6A145116AD996D00CFFD1D /* Frameworks */,
 				BE6A144F16AD996D00CFFD1D /* Products */,
@@ -68,6 +87,7 @@
 		BE6A145116AD996D00CFFD1D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BE6A146F16AD9F1B00CFFD1D /* MapBox.framework */,
 				BE6A145216AD996D00CFFD1D /* UIKit.framework */,
 				BE6A145416AD996D00CFFD1D /* Foundation.framework */,
 				BE6A145616AD996D00CFFD1D /* CoreGraphics.framework */,
@@ -78,6 +98,9 @@
 		BE6A145816AD996D00CFFD1D /* MapAlert */ = {
 			isa = PBXGroup;
 			children = (
+				BE6A147316ADA1AF00CFFD1D /* Controllers */,
+				BE6A147216ADA1A900CFFD1D /* Views */,
+				BE6A147116ADA19F00CFFD1D /* Models */,
 				BE6A146116AD996D00CFFD1D /* CTCDAppDelegate.h */,
 				BE6A146216AD996D00CFFD1D /* CTCDAppDelegate.m */,
 				BE6A145916AD996D00CFFD1D /* Supporting Files */,
@@ -97,6 +120,27 @@
 				BE6A146816AD996D00CFFD1D /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BE6A147116ADA19F00CFFD1D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		BE6A147216ADA1A900CFFD1D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		BE6A147316ADA1AF00CFFD1D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +281,10 @@
 		BE6A146D16AD996D00CFFD1D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/MapAlert/frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MapAlert/MapAlert-Prefix.pch";
 				INFOPLIST_FILE = "MapAlert/MapAlert-Info.plist";
@@ -248,6 +296,10 @@
 		BE6A146E16AD996D00CFFD1D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/MapAlert/frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MapAlert/MapAlert-Prefix.pch";
 				INFOPLIST_FILE = "MapAlert/MapAlert-Info.plist";
