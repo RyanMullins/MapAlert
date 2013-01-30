@@ -33,6 +33,7 @@
     [[self mapView] setZoom:ZOOM_LEVEL_DEFAULT];
     [[self mapView] setMaxZoom:ZOOM_LEVEL_MAX];
     [[self mapView] setMinZoom:ZOOM_LEVEL_MIN];
+    [[self mapView] setUserTrackingMode:true];
     [[self mapView] setShowsUserLocation:YES];
 }
 

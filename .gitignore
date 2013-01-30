@@ -14,3 +14,9 @@ MapAlert.xcodeproj/xcuserdata/Josh.xcuserdatad/xcschemes/xcschememanagement.plis
 .DS_Store
 
 MapAlert.xcodeproj/xcuserdata/rsm5068.xcuserdatad/xcdebugger/Breakpoints.xcbkptlist
+
+*.xcuserstate
+
+*.xcscheme
+
+MapAlert.xcodeproj/xcuserdata/joshstevens.xcuserdatad/xcschemes/xcschememanagement.plist
